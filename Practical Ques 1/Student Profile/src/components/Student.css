@@ -1,0 +1,89 @@
+.student-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  backdrop-filter: blur(16px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6c63ff, #e040fb, #00bfa5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(108, 99, 255, 0.15);
+  border-color: rgba(108, 99, 255, 0.25);
+}
+
+.student-card:hover::before {
+  opacity: 1;
+}
+
+.student-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6c63ff, #e040fb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.35);
+}
+
+.student-initials {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.student-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f0f0f5;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.student-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9a95b3;
+  min-width: 60px;
+}
+
+.detail-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #c9c5de;
+}
